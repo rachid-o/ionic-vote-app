@@ -1,0 +1,12 @@
+<ion-navbar *navbar>
+  <ion-title>Top 10</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-list>
+    <!--<ion-list-header>Select a Fact</ion-list-header>-->
+    <button ion-item text-wrap *ngFor="let vote of votes"  (click)="selectVote(vote)">
+      <p>{{vote}}</p>
+    </button>
+  </ion-list>
+</ion-content>
