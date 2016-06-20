@@ -4,9 +4,9 @@
 
 <ion-content>
   <ion-list>
-    <!--<ion-list-header>Select a Fact</ion-list-header>-->
-    <button ion-item text-wrap *ngFor="let vote of votes"  (click)="selectVote(vote)">
-      <p>{{vote}}</p>
+    <ion-list-header>Zet in volgorde</ion-list-header>
+    <button ion-item text-wrap *ngFor="let vote of voting.votes"  (click)="selectVote(vote)">
+      <p>{{vote.id}} - {{vote.track}}</p>
     </button>
   </ion-list>
 </ion-content>

@@ -1,23 +1,27 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavController} from 'ionic-angular';
 // import {SelectedFactPage} from '../selected-fact-page/selected-fact-page';
+import {Voting} from '../../classes/voting';
+import {VotingService} from '../../classes/voting.service';
+import {Vote} from '../../classes/vote';
 
 @Component({
   templateUrl: 'build/pages/votes-page/votes-page.html'
 })
-export class VotesPage {
+export class VotesPage implements OnInit {
 
-  private votes: string[];
-  constructor(private _navController: NavController) { }
+  voting: Voting;
 
-  ionViewWillEnter(){
-    let _votes = [];
-    _votes.push('Free ways - Light Fire');
-    _votes.push('Dogs  - Who there.');
-    _votes.push('The ant  - Farm Ani');
-    _votes.push('Papa Roach - Life');
-    _votes.push('Polar bears - Happy');
-    this.votes = _votes;
+  constructor(
+        private _navController: NavController, 
+        private votingService: VotingService) { }
+
+  retrieveVoting() {
+    this.votingService.getVoting().then(v => this.voting = v);
+    this.voting = this.votingService.getVoting2();
+  }
+    ngOnInit() {
+      this.retrieveVoting();
   }
 
   selectVote(vote){
