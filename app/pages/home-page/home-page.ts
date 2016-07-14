@@ -4,6 +4,7 @@ import {VotesPage} from '../votes-page/votes-page';
 
 @Component({
   templateUrl: 'build/pages/home-page/home-page.html'
+  // templateUrl: 'build/pages/votes-page/votes-page.html'
 })
 export class HomePage {
   constructor(private _navController: NavController) {

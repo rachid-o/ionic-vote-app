@@ -5,7 +5,7 @@
 <ion-content>
   <ion-list>
     <ion-list-header>Zet in volgorde</ion-list-header>
-    <button ion-item text-wrap *ngFor="let vote of voting.votes"  (click)="selectVote(vote)">
+    <button ion-item text-wrap *ngFor="let vote of votes"  (click)="clickVote(vote)">
       <p>{{vote.id}} - {{vote.track}}</p>
     </button>
   </ion-list>

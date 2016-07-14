@@ -11,20 +11,26 @@ import {Vote} from '../../classes/vote';
 export class VotesPage implements OnInit {
 
   voting: Voting;
+  votes: Vote[] = [];
 
   constructor(
         private _navController: NavController, 
         private votingService: VotingService) { }
 
   retrieveVoting() {
-    this.votingService.getVoting().then(v => this.voting = v);
-    this.voting = this.votingService.getVoting2();
-  }
-    ngOnInit() {
-      this.retrieveVoting();
+    this.votingService.getVoting().then(v => {
+      this.voting = v
+      this.votes = this.voting.votes;
+      // console.log('votes set to:', this.votes)
+    });
   }
 
-  selectVote(vote){
-    // this._navController.push(SelectedFactPage, {selectedVote: vote})
+  ngOnInit() {
+    this.retrieveVoting();
   }
+  
+  clickVote(vote) {
+    console.debug(" clicked on ", vote);
+  }
+
 }

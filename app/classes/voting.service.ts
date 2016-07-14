@@ -11,8 +11,12 @@ export class VotingService {
     private _votes:Vote[] = [
         {id:1, track: 'Free ways - Light Fire'},
         {id:2, track: 'The ant  - Farm Ani'}, 
-        {id:3, track: 'Dogs  - Who there.'} 
+        {id:3, track: 'Dogs  - Who there'}, 
+        {id:4, track: 'Metallica - One'}, 
+        {id:5, track: 'Tame Impala - Let it happen'}, 
+        {id:6, track: 'HIM - leave'} 
     ];
+    
     getVoting(): Promise<Voting> {
         var voting = new Voting(1, this._votes);
         console.log('returning: ', voting);
@@ -22,8 +26,8 @@ export class VotingService {
         //     .then(response => response.json().data)
         //     .catch(this.handleError);
     }
-    getVoting2(): Voting {
-        return new Voting(1, this._votes);
-    }
+    // getVoting2(): Voting {
+    //     return new Voting(1, this._votes);
+    // }
 
 }

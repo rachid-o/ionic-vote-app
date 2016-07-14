@@ -9,10 +9,4 @@ export class Voting {
         this.id = _id;
         this.votes = _votes;
     }
-    // get votes():Vote[] {
-    //     return this._votes;
-    // }
-    // set votes(v:Vote[]) {
-    //     this._votes = v;
-    // }
 }
