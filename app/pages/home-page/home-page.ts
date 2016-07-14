@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {VotesPage} from '../votes-page/votes-page';
 
@@ -6,11 +6,17 @@ import {VotesPage} from '../votes-page/votes-page';
   templateUrl: 'build/pages/home-page/home-page.html'
   // templateUrl: 'build/pages/votes-page/votes-page.html'
 })
-export class HomePage {
-  constructor(private _navController: NavController) {
+export class HomePage implements OnInit {
+
+  constructor(private nav: NavController) {
   }
 
   goToFactsPage(){
-    this._navController.push(VotesPage);
+    this.nav.push(VotesPage);
   }
+
+  ngOnInit() {
+    this.goToFactsPage();
+  }
+
 }
