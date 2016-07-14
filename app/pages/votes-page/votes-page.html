@@ -4,20 +4,8 @@
 
 <ion-content>
   <ion-list  reorder="true" (ionItemReorder)="reorderVotes($event)">
-    <ion-list-header>Zet in volgorde</ion-list-header>
-    <ion-item-sliding *ngFor="let vote of votes" >
-      <ion-item>
-        <button ion-item text-wrap (click)="clickVote(vote)">
-          {{vote.id}} - {{vote.track}}
-        </button>
-      </ion-item>
-    <ion-delete-button class="ion-minus-circled"
-                       ng-click="items.splice($index, 1)">
-    </ion-delete-button>      
-      <ion-item-options>
-        <button danger (click)="removeVote(vote)">
-          <icon trash></icon> Delete
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
+    <button ion-item text-wrap *ngFor="let vote of votes"  (click)="clickVote(vote)">
+      <p>{{vote.id}} - {{vote.track}}</p>
+    </button>
   </ion-list>
+</ion-content>

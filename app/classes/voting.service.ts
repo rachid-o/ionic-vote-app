@@ -9,6 +9,7 @@ import {Voting} from './voting';
 @Injectable()
 export class VotingService {
     private _votes:Vote[] = [
+        {id:0, track: 'Zero - Day'},
         {id:1, track: 'Free ways - Light Fire'},
         {id:2, track: 'The ant  - Farm Ani'}, 
         {id:3, track: 'Dogs  - Who there'}, 
