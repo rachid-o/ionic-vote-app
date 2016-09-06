@@ -4,9 +4,9 @@ import {AboutPage} from '../about-page/about-page';
 import {ContactPage} from '../contact-page/contact-page';
 
 @Component({
-  templateUrl: 'build/pages/tabs/tabs.html'
+  templateUrl: 'build/pages/tabs/tabs.component.html'
 })
-export class TabsPage {
+export class TabsComponent {
 
   private tabHome: any;
   private tabVote: any;
