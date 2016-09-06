@@ -10,7 +10,7 @@ import {VotingService} from './classes/voting.service';
         VotingService
     ]
 })
-export class MyApp {
+export class AppComponent {
 
   private rootPage:any;
 
@@ -25,4 +25,4 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp)
+ionicBootstrap(AppComponent)

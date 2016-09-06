@@ -1,6 +1,7 @@
 export class Vote {
-    id: number;
+    id: string;
     track: string;
+    position: number;
     // spotify_id: string;
     // rating: number;
 }
